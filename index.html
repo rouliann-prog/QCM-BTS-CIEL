@@ -10,6 +10,143 @@
     <h1>QCM BTS CIEL - Quiz interactif</h1>
     <div id="quiz"></div>
   </div>
+
+  <script>
+    const questions = [
+  // --- Électronique ---
+  {
+    question: "Quel composant est polarisé et stocke de l'énergie sous forme de charge électrique ?",
+    answers: ["Résistance", "Condensateur", "Diode", "Transistor"],
+    correct: 1,
+    explanation: "Le condensateur stocke de l'énergie. Il est polarisé, contrairement à une résistance."
+  },
+  {
+    question: "Quelle loi s’applique pour analyser les tensions dans une boucle fermée ?",
+    answers: ["Loi d’Ohm", "Loi de Faraday", "Loi de Kirchhoff des mailles", "Loi de Coulomb"],
+    correct: 2,
+    explanation: "La loi des mailles de Kirchhoff permet d’analyser les tensions dans un circuit fermé."
+  },
+  {
+    question: "Quel instrument est utilisé pour visualiser un signal électrique ?",
+    answers: ["Multimètre", "Oscilloscope", "Alimentation", "Générateur de fonctions"],
+    correct: 1,
+    explanation: "L'oscilloscope permet de visualiser un signal électrique dans le temps."
+  },
+  {
+    question: "Quelle porte logique donne un état haut uniquement si les deux entrées sont hautes ?",
+    answers: ["OU", "NON", "ET", "OU Exclusif"],
+    correct: 2,
+    explanation: "La porte logique ET (AND) ne donne 1 que si les deux entrées sont à 1."
+  },
+  {
+    question: "Dans un circuit RC série, que fait un condensateur plus grand ?",
+    answers: ["Augmente la fréquence", "Diminue le temps de charge", "Augmente la constante de temps", "Baisse la tension"],
+    correct: 2,
+    explanation: "Une plus grande capacité augmente la constante de temps (τ = RC)."
+  },
+
+  // --- Développement ---
+  {
+    question: "Quel langage est principalement utilisé pour développer des interfaces web côté client ?",
+    answers: ["PHP", "Python", "JavaScript", "Java"],
+    correct: 2,
+    explanation: "JavaScript est utilisé dans les navigateurs pour rendre les pages interactives."
+  },
+  {
+    question: "Quelle structure suit le principe FIFO ?",
+    answers: ["Pile", "Tableau", "Liste chaînée", "File"],
+    correct: 3,
+    explanation: "FIFO (First In First Out) est le comportement d'une file (queue)."
+  },
+  {
+    question: "Quel mot-clé permet de créer une classe en Python ?",
+    answers: ["class", "def", "extends", "self"],
+    correct: 0,
+    explanation: "On utilise 'class' pour définir une classe en Python."
+  },
+  {
+    question: "Quel est le rôle de try/except en Python ?",
+    answers: ["Optimiser", "Interrompre", "Gérer les exceptions", "Déclarer une fonction"],
+    correct: 2,
+    explanation: "try/except permet d'intercepter les erreurs lors de l'exécution du code."
+  },
+  {
+    question: "Quel langage permet de faire des requêtes sur une base de données relationnelle ?",
+    answers: ["HTML", "SQL", "XML", "CSS"],
+    correct: 1,
+    explanation: "SQL (Structured Query Language) est utilisé pour interroger les bases de données."
+  },
+
+  // --- Réseaux ---
+  {
+    question: "Quel niveau du modèle OSI gère le routage ?",
+    answers: ["Liaison", "Transport", "Réseau", "Session"],
+    correct: 2,
+    explanation: "Le niveau réseau s’occupe de l’adressage et du routage (ex: IP)."
+  },
+  {
+    question: "Quelle plage est une adresse IP privée ?",
+    answers: ["192.168.0.0/16", "172.32.0.0/12", "127.0.0.1/8", "8.8.8.8"],
+    correct: 0,
+    explanation: "192.168.x.x est une plage privée largement utilisée en réseau local."
+  },
+  {
+    question: "Quel protocole envoie des mails depuis un client vers un serveur ?",
+    answers: ["POP3", "IMAP", "SMTP", "FTP"],
+    correct: 2,
+    explanation: "SMTP (Simple Mail Transfer Protocol) est utilisé pour envoyer les e-mails."
+  },
+  {
+    question: "Quelle commande teste la connectivité réseau ?",
+    answers: ["ping", "ipconfig", "netstat", "tracert"],
+    correct: 0,
+    explanation: "La commande ping permet de tester la communication avec une autre machine."
+  },
+  {
+    question: "Quel est le rôle d’un switch réseau ?",
+    answers: ["Donner une IP", "Acheminer selon MAC", "Crypter", "Donner un nom DNS"],
+    correct: 1,
+    explanation: "Un switch utilise les adresses MAC pour acheminer les trames au bon hôte."
+  },
+
+  // --- Cybersécurité ---
+  {
+    question: "Quelle attaque consiste à saturer un serveur de requêtes ?",
+    answers: ["Phishing", "Ransomware", "DDoS", "Brute force"],
+    correct: 2,
+    explanation: "DDoS (Distributed Denial of Service) vise à rendre un service indisponible."
+  },
+  {
+    question: "Quelle méthode est la plus sûre pour s’authentifier ?",
+    answers: ["Mot de passe", "2FA", "Question secrète", "Filtrage IP"],
+    correct: 1,
+    explanation: "L’authentification à deux facteurs (2FA) ajoute une couche de sécurité."
+  },
+  {
+    question: "Quel protocole web est sécurisé ?",
+    answers: ["HTTP", "FTP", "SSH", "HTTPS"],
+    correct: 3,
+    explanation: "HTTPS chiffre les échanges via SSL/TLS."
+  },
+  {
+    question: "Quel est le rôle d’un cheval de Troie ?",
+    answers: ["Infecter", "S’infiltrer", "Demander rançon", "Scanner le réseau"],
+    correct: 1,
+    explanation: "Un trojan se fait passer pour un programme légitime pour infiltrer le système."
+  },
+  {
+    question: "Quelle bonne pratique réduit les risques de cyberattaque ?",
+    answers: ["Même mot de passe", "Sites douteux", "Mises à jour régulières", "Désactiver l’antivirus"],
+    correct: 2,
+    explanation: "Mettre à jour permet de corriger les vulnérabilités logicielles."
+  }
+];
+
+const quiz = document.getElementById("quiz");
+
+questions.forEach
+  </script>
+
   <script src="script.js"></script>
 </body>
 </html>
